@@ -12,7 +12,7 @@ class AddFeaturesToColleges extends Migration
      */
     public function up()
     {
-        Schema::create('colleges', function (Blueprint $table) {
+        Schema::table('colleges', function (Blueprint $table) {
             //''
             $table->String('name');
             $table->String('population');
