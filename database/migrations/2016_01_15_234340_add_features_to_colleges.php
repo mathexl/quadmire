@@ -19,6 +19,9 @@ class AddFeaturesToColleges extends Migration
             $table->String('cover');
             $table->String('location');
             $table->Boolean('active');
+            $table->String("updated_at");
+            $table->String("created_at");
+                        $table->Integer("id");
         });
     }
 

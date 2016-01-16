@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddFeaturesToColleges extends Migration
+class AddFeaturesToCollegesxx extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddFeaturesToColleges extends Migration
     {
         Schema::table('colleges', function (Blueprint $table) {
             //
-            $table->Integer("id");
+
         });
     }
 
