@@ -69,6 +69,9 @@
   <h1>VTOUR UCHICAGO WITH US!</h1>
   <a href="book/1" class="book">BOOK A TOUR</a>
 </section>
+<section name="colleges">
+  
+</section>
 @endif
 
 @endsection

@@ -5,9 +5,11 @@
   <div class="overlay"><h1>BOOK AN {{strtoupper($college->name)}} VTOUR</h1></div>
 </section>
 
-<form id="app" class="bookingform">
-  <a v-on:click="step = step - 1" v-if="step > 1" class="back"><i class="fa fa-undo"></i> Go Back</a>
+<form id="app" class="bookingform" action="/book" method="POST">
+  {!! csrf_field() !!}
 
+  <a v-on:click="step = step - 1" v-if="step > 1" class="back"><i class="fa fa-undo"></i> Go Back</a>
+  <input type="hidden" name="id" value="{{$college->id}}">
   <div class="fields">
   <div v-if="step != 1" class="field"><h1>What Are You Looking For?</h1> @{{lookingfor}}</div>
   <div v-if="step == 1" class="editfield">
@@ -27,7 +29,7 @@
 
   <div v-if="step != 3 && programs != '' && when != ''" class="field"><h1>Any Programs of {{$college->name}} That You Are Interested In?</h1> @{{programs}}</div>
   <div v-if="step == 3" class="editfield">
-    <h1>ANY SPECIFIC CLUBS OR PROGRAMS OF {{strtoupper($college->name)}} THAT YOU ARE INTERESTED IN?</h1>
+    <h1>ANY PROGRAMS OF {{strtoupper($college->name)}} THAT YOU ARE INTERESTED IN?</h1>
     <h2>Maybe club sports, greek life, or a special major track?</h2>
     <input type="text" name="programs" v-model="programs" placeholder="e.g. Greek Life, academic clubs, pre-med track...">
     <a v-on:click="step = step + 1" class="next">Continue</a>

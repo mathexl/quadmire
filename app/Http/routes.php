@@ -61,6 +61,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/add_colleges', 'TourController@make_college');
     Route::get('/show_colleges', 'TourController@show_colleges');
     Route::get('/book/{id}', 'TourController@book');
+    Route::post('/book', 'TourController@request');
 
 });
 
