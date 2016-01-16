@@ -11,7 +11,7 @@
       @if(Auth::user()->setup == true)
         <a>Settings</a>
         <a>Past Tours</a>
-        <a>Upcoming Video Tours</a>
+        <a href="/upcoming">Upcoming Video Tours</a>
       @endif
     @endif
   </div>

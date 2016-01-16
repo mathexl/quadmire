@@ -62,6 +62,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/show_colleges', 'TourController@show_colleges');
     Route::get('/book/{id}', 'TourController@book');
     Route::post('/book', 'TourController@request');
+    Route::get('/upcoming', 'TourController@upcoming');
 
 });
 

@@ -564,5 +564,72 @@
         box-sizing: border-box;
         margin-right:1%;
       }
+
+      .upcoming {
+        width:50%;
+        float:left;
+        height:250px;
+        padding:0px;
+        margin:0px;
+        box-sizing: border-box;
+        display:inline-block;
+        background-color:white;
+        border:2px #ddd solid;
+      }
+
+      .upcoming > .prof{
+        width:210px;
+        margin:20px;
+        height:210px;
+        float:left;
+        background-position: center center;
+        background-size:cover;
+      }
+
+      .upcoming > .rest{
+        width: 50%;
+        width: calc(100% - 250px);
+        float:left;
+        box-sizing: border-box;
+        padding-top:20px;
+        height: 230px;
+      }
+
+      .upcoming > .rest > h1{
+        width:100%;
+        font-size:24px;
+        color:#52AEFb;
+        font-family:"Oswald","Lato";
+        margin-top:0px;
+        margin-bottom:0px;
+      }
+
+      .upcoming > .rest > h2{
+        width:100%;
+        font-size:14px;
+        color:#888;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:20px;
+      }
+
+      .upcoming > .rest > span{
+
+        border-radius:4px;
+        border:1px #bbb solid;
+        color:#bbb;
+        padding:6px;
+        font-family:"Lato";
+        font-size:15px;
+
+      }
+
+      .upcoming > .rest > p{
+
+        color:#bbb;
+        font-family:"Lato";
+        font-size:13px;
+        width:90%;
+      }
   </style>
 </head>

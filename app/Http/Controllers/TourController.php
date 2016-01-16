@@ -10,7 +10,7 @@ use App\College;
 use App\User;
 use App\Tour;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 
 class TourController extends Controller
 {
@@ -51,7 +51,17 @@ class TourController extends Controller
       $tour->matters = $request->matters;
       $tour->save();
 
+      return redirect('/upcoming');
+    }
 
-      print $tour->all();
+    public function upcoming(){
+
+      $tours = DB::table('tours')
+            ->where('tours.prospie', '=', Auth::user()->id)
+            ->join('colleges', 'tours.college', '=', 'colleges.id')
+            ->select('tours.*', 'colleges.*')
+            ->get();
+
+      return view('upcoming')->with(['tours' => $tours]);
     }
 }
