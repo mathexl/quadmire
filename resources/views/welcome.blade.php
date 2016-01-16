@@ -27,7 +27,7 @@
   </section>
 
   <section name="pricing">
-    <h1>FLAT, EASY RATE  <br><span style="color:#52AEFB;background-color:white;padding:1px 10px 3px 10px;border-radius:3px;">$35.00/HOUR</span></h1>
+    <h1>FLAT, EASY RATE  <br><span style="color:#52AEFB;background-color:white;padding:1px 10px 3px 10px;border-radius:3px;">$35.00/TOUR</span></h1>
     <div class="features">
       <div class="feature">
         <span class="fa-stack fa-lg">
