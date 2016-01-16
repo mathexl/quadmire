@@ -561,7 +561,7 @@
         border-radius:5px;
         outline:none;
         border:none;
-        border-bottom:1px #ddd solid;
+        border-bottom:0px #ddd solid;
         font-size:16px;
         color:#888;
         padding:4px;

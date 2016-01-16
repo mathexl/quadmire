@@ -9,7 +9,7 @@
     </div>
   </section>
   <section name="features">
-    <h1>INTERACTIVE, LIVE ONE-HOUR VIDEO TOURS BY FRIENDLY HOSTS</h1>
+    <h1>INTERACTIVE, CANDID LIVE ONE-HOUR VIDEO TOURS BY FRIENDLY HOSTS</h1>
     <div class="features">
       <div class="feature">
         <i class="fa fa-users"></i>

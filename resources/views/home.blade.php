@@ -76,6 +76,7 @@
     <a href="book/2" class="book">BOOK A TOUR</a>
     </div>
   </div>
+
 </section>
 @endif
 
