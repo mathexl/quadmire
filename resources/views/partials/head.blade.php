@@ -189,6 +189,15 @@
     }
 
 
+    section[name="prices"]{
+      width:100%;
+      height:150px;
+      background-color: #ff6632;
+      display:inline-block;
+    }
+
+
+
 
     section[name="features"]{
       width:100%;
@@ -237,6 +246,56 @@
     section[name="features"] > .features > .feature > i{
       font-size:2em;
     }
+
+
+    section[name="pricing"]{
+      width:100%;
+      height:200px;
+      background-color: #888;
+      display:inline-block;
+    }
+
+    section[name="pricing"] > h1{
+      font-family:'Oswald','Lato';
+      font-size:24px;
+      text-align:center;
+      color:white;
+      width:90%;
+      margin-left:5%;
+      margin-right:5%;
+      margin-top:10px;
+      font-weight:300;
+    }
+
+    section[name="pricing"] > .features{
+      width:70%;
+      height:70px;
+      margin-left:15%;
+      margin-right:15%;
+      color:white;
+    }
+
+    section[name="pricing"] > .features > .feature{
+      width:33.333%;
+      float:left;
+      height:70px;
+      text-align:center;
+    }
+
+    section[name="pricing"] > .features > .feature > h1{
+      font-family:'Oswald','Lato';
+      font-size:15px;
+      text-align:center;
+      color:white;
+      width:90%;
+      margin-left:5%;
+      margin-right:5%;
+    }
+
+    section[name="pricing"] > .features > .feature > i{
+      font-size:2em;
+    }
+
 
     section[name="setup"]{
       width:100%;

@@ -25,6 +25,28 @@
       </div>
     </div>
   </section>
+
+  <section name="pricing">
+    <h1>FLAT, EASY RATE  <br><span style="color:#52AEFB;background-color:white;padding:1px 10px 3px 10px;border-radius:3px;">$35.00/HOUR</span></h1>
+    <div class="features">
+      <div class="feature">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-phone fa-stack-1x"></i>
+          <i class="fa fa-ban fa-stack-2x"></i>
+        </span>
+        <h1 style="margin-top:3px;">NO CHARGE FOR CALL DROPS</h1>
+      </div>
+      <div class="feature">
+        <i class="fa fa-user"></i>
+        <h1>YOU CHOOSE THE HOST</h1>
+      </div>
+      <div class="feature">
+        <i class="fa fa-dot-circle-o"></i>
+        <h1>LIVE, NOT PRERECORDED</h1>
+      </div>
+    </div>
+  </section>
+
 </body>
 @else
 Lol
