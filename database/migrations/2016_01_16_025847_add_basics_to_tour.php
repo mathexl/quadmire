@@ -12,7 +12,18 @@ class AddBasicsToTour extends Migration
      */
     public function up()
     {
+      Schema::create('tours', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->String('lookingfor');
+            $table->String('when');
+            $table->String('programs');
+            $table->Integer('prospie');
+            $table->Integer('college');
 
+
+            $table->String('matters');
+        });
     }
 
     /**
@@ -22,6 +33,6 @@ class AddBasicsToTour extends Migration
      */
     public function down()
     {
-        
+
     }
 }

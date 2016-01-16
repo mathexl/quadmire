@@ -409,6 +409,58 @@
 
       }
 
+      section[name="colleges"]{
+        width:100%;
+        height:400px;
+        background-position:center;
+        background-size:cover;
+        display:inline-block;
+      }
+
+      section[name="colleges"] > .college{
+        width:50%;
+        height:400px;
+        float:left;
+        background-position:center;
+        background-size:cover;
+        display:inline-block;
+      }
+
+      section[name="colleges"] > .college  h1{
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        color:white;
+        font-family:"Oswald","Lato";
+        font-size:60px;
+        margin-top:55px;
+        text-align:center;
+
+      }
+
+
+      section[name="colleges"] > .college  a.book{
+        display:block;
+        width:300px;
+        height:60px;
+        color:white;
+        text-align:center;
+        box-sizing: border-box;
+        font-size:20px;
+        padding-top:14px;
+        cursor: pointer;
+        margin-left:auto;
+        margin-right:auto;
+        text-decoration: none;
+        background-color:#52AEFB;
+        font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
+      }
+
+        section[name="colleges"] > .college  a.book:hover{
+          opacity:.8;
+
+        }
+
       section[name="bookcollege"]{
         width:100%;
         height:250px;

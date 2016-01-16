@@ -16,6 +16,8 @@ class TourController extends Controller
 {
     //
     public function make_college(){
+
+      /* UCHICAGO **************/
       $college = new College;
       $college->id = 1;
       $college->name = "University of Chicago";
@@ -24,6 +26,22 @@ class TourController extends Controller
       $college->cover = "uchicago.png";
       $college->location ="Chicago, IL";
       $college->save();
+      /************************/
+
+      /* UCHICAGO **************/
+      $college = new College;
+      $college->id = 2;
+      $college->name = "Columbia University";
+      $college->population = "6170";
+      $college->active = true;
+      $college->cover = "columbia.png";
+      $college->location ="New York City, NY";
+      $college->save();
+      /************************/
+
+
+      $colleges = College::all();
+      var_dump($colleges);
     }
 
     public function show_colleges(){
