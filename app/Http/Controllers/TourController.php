@@ -58,6 +58,12 @@ class TourController extends Controller
       return view('book.book')->with(['college' => $college]);
     }
 
+    public function delete($id){
+      $tour = Tour::find($id);
+      $tour->delete();
+      return $tour;
+    }
+
     public function request(Request $request){
 
       $tour = new Tour;
@@ -75,10 +81,10 @@ class TourController extends Controller
     public function upcoming(){
 
       $tours = DB::table('tours')
+            ->join('colleges', 'colleges.id', '=', 'tours.college')
+            ->select('tours.*', 'colleges.name','colleges.cover', 'colleges.population')
             ->where('tours.prospie', '=', Auth::user()->id)
-            ->join('colleges', 'tours.college', '=', 'colleges.id')
-            ->select('tours.*', 'colleges.*')
-            ->get();
+            ->distinct()->get();
 
       return view('upcoming')->with(['tours' => $tours]);
     }

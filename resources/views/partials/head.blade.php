@@ -2,6 +2,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <script src="{!! URL::asset('assets/js/vue.js') !!}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
   <style>
     body{
@@ -676,6 +678,18 @@
 
       }
 
+      .upcoming > .rest > .cancel{
+
+        border-radius:4px;
+        border:0px #bbb solid;
+        color:#ff6632;
+        cursor:pointer;
+        padding:6px;
+        font-family:"Lato";
+        font-size:15px;
+
+      }
+
       .upcoming > .rest > p{
 
         color:#bbb;
@@ -684,4 +698,8 @@
         width:90%;
       }
   </style>
+  <meta id="token" name="token" value="{{ csrf_token() }}">
+  <script>
+  Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
+  </script>
 </head>

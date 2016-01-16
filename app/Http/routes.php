@@ -63,6 +63,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/book/{id}', 'TourController@book');
     Route::post('/book', 'TourController@request');
     Route::get('/upcoming', 'TourController@upcoming');
+    Route::get('/tour/delete/{id}', 'TourController@delete');
 
 });
 
