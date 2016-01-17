@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\College;
 
 class HomeController extends Controller
 {
@@ -26,7 +26,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = Auth::user();
+        if(!strpos($user->email,".edu")){
+          return view('home');
+        } else {
+          $colleges = College::all();
+          foreach($colleges as $college){
+            if(strpos($user->email,$college->email)){
+              return view('hostboard')->with(["college"=>$college]);
+            }
+          }
+          return view('partials.comingsoon');
+        }
     }
 
     public function setup(Request $request){
@@ -36,7 +47,11 @@ class HomeController extends Controller
           $user->google_username = $request->google;
           $user->facetime_username = $request->facetime;
           $user->year = $request->year;
-          $user->highschool = $request->highschool;
+          if($user->highschool){
+            $user->highschool = $request->highschool;
+          } else {
+            $user->clubs = $request->clubs;
+          }
           $user->major = $request->major;
           $user->setup = true;
           $user->save();
