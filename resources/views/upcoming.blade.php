@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="tours">
+<div id="tours" style="min-height: 100vh;">
   <div class="upcoming" v-for="tour in tours" track-by="$index">
     <div class="prof" style="background-image:url('{!! URL::asset('assets/images') !!}/@{{tour.cover}}')"></div>
     <div class="rest">

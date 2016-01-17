@@ -55,6 +55,66 @@
       margin-top:-7px;
     }
 
+    footer{
+      width:100%;
+      height:auto;
+      background-color:#ff6632;
+      box-sizing: border-box;
+      position:relative;
+      min-height: 60px;
+      color:white;
+      display:inline-block;
+    }
+
+    footer > .leftcol{
+      width:20%;
+      text-align:right;
+      float:left;
+      min-height:100px;
+      display:inline-block;
+      padding-top:32px;
+      color:white;
+      font-size:14px;
+    }
+
+    footer > .leftcol > span{
+      font-size:11px;
+    }
+
+    footer > .leftcol > a{
+      color:white;
+      width:100%;
+      text-align:right;
+
+    }
+
+    footer > .leftcol > img{
+      height:25px;
+
+    }
+
+    footer > .rightcol{
+      width:20%;
+      text-align:left;
+      float:left;
+      min-height:100px;
+      padding-left:25px;
+      box-sizing: border-box;
+      display:inline-block;
+      padding-top:30px;
+      color:white;
+      font-size:14px;
+    }
+
+    footer > .rightcol > a{
+      color:white;
+      margin-bottom:4px;
+      width:100%;
+      text-align:left;
+      text-decoration: none;
+      display:block;
+    }
+
     a:hover{
       opacity:.6;
     }
@@ -552,7 +612,7 @@
       .bookingform{
         width:100%;
         height:auto;
-        min-height:100px;
+        min-height:50vh;
         position: relative;
         display: inline-block;
       }
