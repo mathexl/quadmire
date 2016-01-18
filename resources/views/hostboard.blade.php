@@ -67,7 +67,7 @@
 @else
 <section name="featurecollege" style="height:350px;background-image:url('{!! URL::asset('assets/images/' . $college->cover) !!}')">
   <div class="overlay">
-    <h1>WOO! YOU'RE ON QUADMIRE @ {{strtoupper($college->name)}}!</h1>
+    <h1>WOO! YOU'RE ON QUADMIRE <br>@<span></span>{{strtoupper($college->name)}}!</h1>
     <a href="/upcoming" class="book">SEE YOUR TOURS</a>
   </div>
 </section>
