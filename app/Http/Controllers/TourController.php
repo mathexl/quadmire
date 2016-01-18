@@ -90,6 +90,8 @@ class TourController extends Controller
             ->where('tours.prospie', '=', Auth::user()->id)
             ->distinct()->get();
 
-      return view('upcoming')->with(['tours' => $tours]);
+      $user = Auth::user();
+
+      return view('upcoming')->with(['tours' => $tours,'user' => $user]);
     }
 }

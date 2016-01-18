@@ -65,18 +65,46 @@
   </div>
 </section>
 @else
-<section name="featurecollege" style="background-image:url('{!! URL::asset('assets/images/uchicago.png') !!}')">
-    <h1>VTOUR UCHICAGO WITH US!</h1>
-    <a href="book/1" class="book">BOOK A TOUR</a>
-</section>
-<section name="colleges">
-  <div class="college" style="background-image:url('{!! URL::asset('assets/images/columbia.png') !!}')">
-    <div class="overlay">
-    <h1>VTOUR COLUMBIA UNIVERSITY WITH US!</h1>
-    <a href="book/2" class="book">BOOK A TOUR</a>
-    </div>
+<section name="featurecollege" style="height:350px;background-image:url('{!! URL::asset('assets/images/' . $college->cover) !!}')">
+  <div class="overlay">
+    <h1>WOO! YOU'RE ON QUADMIRE @ {{strtoupper($college->name)}}!</h1>
+    <a href="/upcoming" class="book">SEE YOUR TOURS</a>
   </div>
+</section>
+<section name="videometrics" >
+  <div class="leftbloc">
+    <h1>
+      <i class="fa fa-camera-retro"></i>
+      <br>YOUR VIDEOMETRICS</h1>
+  </div>
+  <div class="rightbloc">
 
+    <form action="/setup" method="POST">
+      {!! csrf_field() !!}
+
+      <h3>Listed below are your video chat account usernames?  Update your account names accordingly if you
+      wish to change them!</h3>
+      <div class="block">
+      <div class="typebloc">
+        <i class="fa fa-skype"></i>
+      </div>
+      <input class="form" placeholder="Skype Username" name="skype" value="{{Auth::user()->skype_username}}">
+      </div>
+      <div class="block">
+      <div class="typebloc">
+        <i class="fa fa-google-plus"></i>
+      </div>
+      <input class="form" placeholder="Google Hangout Username" name="google" value="{{Auth::user()->google_username}}">
+      </div>
+      <div class="block">
+      <div class="typebloc">
+        <i class="fa fa-apple"></i>
+      </div>
+      <input class="form" placeholder="Facetime Username" name="facetime" value="{{Auth::user()->facetime_username}}">
+      </div>
+      <input type="submit" value="SAVE DATA">
+    </form>
+  </div>
 </section>
 @endif
 

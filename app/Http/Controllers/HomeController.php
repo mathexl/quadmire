@@ -6,9 +6,12 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\College;
+use App\Passport;
 
 class HomeController extends Controller
 {
+
+
     /**
      * Create a new controller instance.
      *
@@ -33,7 +36,8 @@ class HomeController extends Controller
           $colleges = College::all();
           foreach($colleges as $college){
             if(strpos($user->email,$college->email)){
-              return view('hostboard')->with(["college"=>$college]);
+              $passport = Passport::find($user->passport);
+              return view('hostboard')->with(["college"=>$college,"passport"=>$passport]);
             }
           }
           return view('partials.comingsoon');
@@ -56,7 +60,27 @@ class HomeController extends Controller
           $user->setup = true;
           $user->save();
 
+
+          //** creation of a passport ***/
+          $passport = new Passport;
+          $passport->host = $user->id;
+          $colleges = College::all();
+          foreach($colleges as $college){
+            if(strpos($user->email,$college->email)){
+              $passport->college = $college->id;
+            }
+          }
+          $passport->numberoforders = 0;
+          $passport->save();
+
+          $user->passport = $passport->id;
+          $user->save();
+          //* end creation of passport **/
+
+
           return redirect('dashboard');
         }
     }
+
+
 }

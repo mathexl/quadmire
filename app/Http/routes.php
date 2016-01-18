@@ -38,6 +38,8 @@ Route::group(['middleware' => ['web']], function () {
     });
 
 
+
+
     //
     // Authentication routes...
     Route::get('/login', 'Auth\AuthController@getLogin');
@@ -47,6 +49,12 @@ Route::group(['middleware' => ['web']], function () {
     // Registration routes...
     Route::get('/register', 'Auth\AuthController@getRegister');
     Route::post('/register', 'Auth\AuthController@postRegister');
+
+    Route::get('/workwithus', 'ExternalController@workWithUs');
+    Route::get('/termsandservice', 'ExternalController@termsAndService');
+    Route::get('/colleges', 'ExternalController@currentColleges');
+    Route::get('/howtobecomeahost', 'ExternalController@howToBecomeAHost');
+    Route::get('/contactus', 'ExternalController@contact');
 
 });
 

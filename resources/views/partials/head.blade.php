@@ -1,5 +1,6 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{!! URL::asset('assets/css/font-awesome.min.css') !!}">
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <script src="{!! URL::asset('assets/js/vue.js') !!}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -117,6 +118,11 @@
 
     a:hover{
       opacity:.6;
+    }
+
+    .nonhover:hover{
+      opacity:1;
+      cursor:default;
     }
 
     section[name="main"]{
@@ -359,8 +365,8 @@
 
     section[name="setup"]{
       width:100%;
-      height:100vh;
-      height:calc(100vh - 60px);
+      min-height:100vh;
+      min-height:calc(100vh - 60px);
       position:relative;
       overflow:hidden;
     }
@@ -472,6 +478,121 @@
 
     }
 
+    section[name="external"]{
+      width:100%;
+      min-height:100vh;
+      min-height:calc(100vh - 60px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    section[name="external"] > .overlay{
+      width:100%;
+      height:500vh;
+      background-position: 0px 0px;
+      background-size:cover;
+      position:absolute;
+      top:0px;
+      left:0px;
+      z-index:1;
+    }
+
+    section[name="external"] > .main{
+      width:58%;
+      margin-left:5%;
+      height:100vh;
+      height:calc(100vh - 60px);
+      background-color:white;
+      display:inline-block;
+      z-index:2;
+      position:relative;
+    }
+
+    section[name="external"] > .main > h1{
+      font-size:36px;
+      font-family:"Oswald","Lato",Lato;
+      color:#ff6632;
+      margin-top:3px;
+      margin-left:10px;
+      margin-bottom:4px;
+    }
+
+    section[name="external"] > .main > h2{
+      font-size:16px;
+      font-family:"Lato",Lato;
+      color:#888;
+      margin-top:0px;
+      margin-left:10px;
+      width:95%;
+    }
+
+    section[name="external"] > .main > h2 > li{
+      font-weight:200;
+    }
+
+    section[name="external"] > .main h3{
+      font-size:13px;
+      font-family:"Lato",Lato;
+      color:#888;
+      font-weight:400;
+      margin-top:0px;
+      margin-left:0px;
+      width:95%;
+    }
+
+    section[name="external"] > .main > form{
+      padding-left:10px;
+    }
+
+    section[name="external"] > .main > form > input[type="submit"]{
+      padding:10px;
+      padding-left:15px;
+      padding-right:15px;
+      background-color:#ff6632;
+      color:white;
+      font-family: "Oswald","Lato";
+      font-size:18px;
+      border:none;
+      float:right;
+      cursor:pointer;
+      margin-right:20px;
+      margin-top:0px;
+    }
+
+    section[name="external"] > .main > form > input[type="submit"]:hover{
+      opacity:.5;
+    }
+
+    section[name="external"] > .main > form > .block {
+      width:100%;
+      height:50px;
+    }
+
+    section[name="external"] > .main > form > .block > .typebloc{
+      font-size:2em;
+      color:#ccc;
+      float:left;
+    }
+
+    section[name="external"] > .main > form > .block:hover > .typebloc {
+      color:#ff6632 !important;
+    }
+
+
+
+    section[name="external"] > .main > form > .block > input{
+      font-size:1em;
+      color:#ccc;
+      float:right;
+      width:80%;
+      width:calc(100% - 60px);
+      border:none;
+      margin-top:6px;
+      padding-left:9px;
+      outline:none;
+
+    }
+
     .clear{
       clear:both;
       width:100%;
@@ -487,6 +608,102 @@
       100% {margin-top:-400vh;}
     }
 
+    section[name="videometrics"]{
+      min-height: calc(100vh - 410px);
+      background-color:white;
+      width:100%;
+      display:inline-block;
+    }
+
+    section[name="videometrics"] > .leftbloc{
+      float:left;
+      height: calc(100vh - 410px);
+      width: calc(100vh - 410px);
+      background-color:#52AEFB;
+    }
+
+    section[name="videometrics"] > .leftbloc > h1 > i{
+      font-size:6em;
+      color:white;
+      width:100%;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    section[name="videometrics"] > .leftbloc > h1{
+      width:90%;
+      margin-left:5%;
+      margin-right:5%;
+      color:white;
+      font-size:20px;
+      font-family:"Oswald","Lato";
+    }
+
+    section[name="videometrics"] > .rightbloc{
+      float:left;
+      min-height: calc(100vh - 410px);
+      width: calc(100% - 100vh + 410px);
+      background-color:white;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > h3{
+      font-size:16px;
+      color:#888;
+    }
+
+    section[name="videometrics"] > .rightbloc > form{
+      padding-left:10px;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > input[type="submit"]{
+      padding:10px;
+      padding-left:15px;
+      padding-right:15px;
+      background-color:#52AEFB;
+      color:white;
+      font-family: "Oswald","Lato";
+      font-size:18px;
+      border:none;
+      float:right;
+      cursor:pointer;
+      margin-right:20px;
+      margin-top:-15px;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > input[type="submit"]:hover{
+      opacity:.5;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > .block {
+      width:100%;
+      height:50px;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > .block > .typebloc{
+      font-size:2em;
+      color:#ccc;
+      float:left;
+    }
+
+    section[name="videometrics"] > .rightbloc > form > .block:hover > .typebloc {
+      color:#52AEFB !important;
+    }
+
+
+
+    section[name="videometrics"] > .rightbloc > form > .block > input{
+      font-size:1em;
+      color:#ccc;
+      float:right;
+      width:80%;
+      width:calc(100% - 60px);
+      border:none;
+      margin-top:6px;
+      padding-left:9px;
+      outline:none;
+
+    }
+
     section[name="featurecollege"]{
       width:100%;
       height:400px;
@@ -495,7 +712,7 @@
       display:inline-block;
     }
 
-    section[name="featurecollege"] > h1{
+    section[name="featurecollege"] h1{
       width:90%;
       margin-left:5%;
       margin-right:5%;
@@ -508,7 +725,7 @@
     }
 
 
-    section[name="featurecollege"] > a.book{
+    section[name="featurecollege"] a.book{
       display:block;
       width:300px;
       height:60px;
@@ -525,7 +742,7 @@
       font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
     }
 
-      section[name="featurecollege"] > a.book:hover{
+      section[name="featurecollege"] a.book:hover{
         opacity:.8;
 
       }
@@ -736,6 +953,33 @@
         cursor:pointer;
         box-sizing: border-box;
         margin-right:1%;
+      }
+
+      .none{
+        width:100%;
+        height:100vh;
+        height: calc(100vh - 60px);
+      }
+
+      .none > h1 {
+        margin-top:60px;
+        width:90%;
+        margin-left:5%;
+        text-align:center;
+        color: #ff6632;
+        font-size:32px;
+        font-family: "Oswald","Lato";
+        margin-bottom:3px;
+      }
+
+      .none > h2 {
+        margin-top:0px;
+        width:90%;
+        margin-left:5%;
+        text-align:center;
+        color: #888;
+        font-size:15px;
+        font-family: "Lato";
       }
 
       .upcoming {

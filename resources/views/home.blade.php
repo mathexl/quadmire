@@ -65,19 +65,20 @@
   </div>
 </section>
 @else
-<section name="featurecollege" style="background-image:url('{!! URL::asset('assets/images/uchicago.png') !!}')">
-    <h1>VTOUR UCHICAGO WITH US!</h1>
-    <a href="book/1" class="book">BOOK A TOUR</a>
-</section>
-<section name="colleges">
-  <div class="college" style="background-image:url('{!! URL::asset('assets/images/columbia.png') !!}')">
-    <div class="overlay">
-    <h1>VTOUR COLUMBIA UNIVERSITY WITH US!</h1>
-    <a href="book/2" class="book">BOOK A TOUR</a>
+  <section name="featurecollege" style="background-image:url('{!! URL::asset('assets/images/uchicago.png') !!}')">
+      <h1>VTOUR UCHICAGO WITH US!</h1>
+      <a href="book/1" class="book">BOOK A TOUR</a>
+  </section>
+  <section name="colleges">
+    <div class="college" style="background-image:url('{!! URL::asset('assets/images/columbia.png') !!}')">
+      <div class="overlay">
+      <h1>VTOUR COLUMBIA UNIVERSITY WITH US!</h1>
+      <a href="book/2" class="book">BOOK A TOUR</a>
+      </div>
     </div>
-  </div>
 
-</section>
+  </section>
+
 @endif
 
 @endsection

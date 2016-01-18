@@ -18,17 +18,17 @@
     <h1>WHAT ARE YOU LOOKING FOR?</h1>
     <h2>In one sentence, what do you want to learn most about during this tour?</h2>
     <input type="text" name="lookingfor" value="@{{lookingfor}}" v-model="lookingfor" placeholder="e.g. School culture, admission tips, campus logistics...">
-    <a v-on:click="step = step + 1" class="next">Continue</a>
+    <a v-on:click="step = step + 1" class="next" v-on:keydown.enter="step = step + 1">Continue</a>
   </div>
 
   <div v-if="step != 2 && when != ''" class="field"><h1>Have You Visited {{$college->name}} Before, And If So, When?</h1> @{{when}}
     <input type="hidden" name="when" value="@{{when}}">
   </div>
   <div v-if="step == 2" class="editfield">
-    <h1>HAVE YOU VISITED UCHICAGO BEFORE?</h1>
+    <h1>HAVE YOU VISITED {{strtoupper($college->name)}} BEFORE?</h1>
     <h2>And if so, when?</h2>
     <input type="text" name="when" v-model="when" placeholder="e.g. No or Yes, Last December...">
-    <a v-on:click="step = step + 1" class="next">Continue</a>
+    <a v-on:click="step = step + 1" class="next" v-on:keydown.enter="step = step + 1">Continue</a>
   </div>
 
   <div v-if="step != 3 && programs != '' && when != ''" class="field"><h1>Any Programs of {{$college->name}} That You Are Interested In?</h1> @{{programs}}
@@ -38,7 +38,7 @@
     <h1>ANY PROGRAMS OF {{strtoupper($college->name)}} THAT YOU ARE INTERESTED IN?</h1>
     <h2>Maybe club sports, greek life, or a special major track?</h2>
     <input type="text" name="programs" v-model="programs" placeholder="e.g. Greek Life, academic clubs, pre-med track...">
-    <a v-on:click="step = step + 1" class="next">Continue</a>
+    <a v-on:click="step = step + 1" class="next" v-on:keydown.enter="step = step + 1">Continue</a>
   </div>
 
   <div v-if="step != 4 && programs != '' && when != '' && matters != ''" class="field"><h1>Any Other General Matters?</h1> @{{matters}}
@@ -48,7 +48,7 @@
     <h1>ANY OTHER GENERAL MATTERS?</h1>
     <h2>Anything else that may come to mind?</h2>
     <input type="text" name="matters" v-model="matters" placeholder="e.g. I want to learn also about X...">
-    <a v-on:click="step = step + 1" class="next">Continue</a>
+    <a v-on:click="step = step + 1" class="next" v-on:keydown.enter="step = step + 1">Continue</a>
   </div>
   <br>
   <br>

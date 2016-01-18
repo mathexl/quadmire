@@ -18,7 +18,16 @@
     </div>
 
   </div>
+  @if($tours == [])
+  <div class="none">
+    <h1>YOU CURRENTLY HAVE NO UPCOMING TOURS :/</h1>
+    @if($user->passport == '')
+    <h2>Book a tour anywhere that we support and we will get you started!</h2>
+    @endif
+  </div>
+  @endif
 </div>
+
 
   <script>
   var tours = new Vue({
