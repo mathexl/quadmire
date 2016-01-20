@@ -68,6 +68,55 @@ class TourController extends Controller
       return $tour;
     }
 
+    public function tour($id){
+      $tour = Tour::find($id);
+      $user = Auth::user();
+      if($tour->prospie != $user->id){
+        return view('error.404');
+      }
+      $college = College::find($tour->college);
+      return view('tour')->with(['tour' => $tour, 'user' => $user, 'college' => $college]);
+    }
+
+    public function delegate($id){
+      $user = Auth::user();
+      if($user->admin != true){
+        return view('error.404');
+      }
+
+      $college = College::find($id);
+      $hosts = DB::table('users')
+            ->join('passports', 'passports.id', '=', 'users.passport')
+            ->where('passports.college', '=', $college->id)
+            ->distinct()->get();
+
+      $tours = DB::table('tours')
+            ->join('colleges', 'colleges.id', '=', 'tours.college')
+            ->join('users', 'users.id', '=', 'tours.prospie')
+            ->select('tours.*','colleges.cover', 'colleges.population','users.name','users.email',
+            'users.skype_username','users.facetime_username','users.google_username')
+            ->where('tours.college', '=', $college->id)
+            ->distinct()->get();
+
+      return view('delegate')->with(['college' => $college, 'hosts' => $hosts, 'tours' => $tours]);
+    }
+
+    public function delegatetour(Request $request, $tour){
+      $user = Auth::user();
+      if($user->admin != true){
+        return view('error.404');
+      }
+
+      $tour = Tour::find($tour);
+      $host = $request->id;
+      $host = User::find($host);
+
+      $tour->designee = $host->id;
+      $tour->save();
+
+      return "Designated: " . $host->id . " to " . $tour->id;
+    }
+
     public function request(Request $request){
 
       $tour = new Tour;

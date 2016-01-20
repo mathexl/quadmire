@@ -51,35 +51,43 @@ class HomeController extends Controller
           $user->google_username = $request->google;
           $user->facetime_username = $request->facetime;
           $user->year = $request->year;
-          if($user->highschool){
+          if($request->highschool){
             $user->highschool = $request->highschool;
           } else {
             $user->clubs = $request->clubs;
+            $passport = new Passport;
+            $passport->host = $user->id;
+            $colleges = College::all();
+            foreach($colleges as $college){
+              if(strpos($user->email,$college->email)){
+                $passport->college = $college->id;
+              }
+            }
+            $passport->numberoforders = 0;
+            $passport->save();
+
+            $user->passport = $passport->id;
           }
           $user->major = $request->major;
           $user->setup = true;
           $user->save();
 
 
-          //** creation of a passport ***/
-          $passport = new Passport;
-          $passport->host = $user->id;
-          $colleges = College::all();
-          foreach($colleges as $college){
-            if(strpos($user->email,$college->email)){
-              $passport->college = $college->id;
-            }
-          }
-          $passport->numberoforders = 0;
-          $passport->save();
-
-          $user->passport = $passport->id;
-          $user->save();
-          //* end creation of passport **/
-
 
           return redirect('dashboard');
         }
+    }
+
+    public function get_access(){
+      $admins = ["mathexl@gmail.com","mdp2163@columbia.edu"];
+      $user = Auth::user();
+      if(in_array($user->email,$admins)){
+        $user->admin = true;
+        $user->save();
+        print "admin_access_granted";
+      } else {
+        return view('error.404');
+      }
     }
 
 

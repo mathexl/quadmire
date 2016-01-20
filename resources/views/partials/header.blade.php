@@ -9,12 +9,12 @@
     <a href="/logout" class="embezzle">Log Out</a>
     <a class="nonhover">{{Auth::user()->name}}</a>
       @if(Auth::user()->setup == true)
-        @if(Auth::user()->password == '')
+        @if(Auth::user()->password == 0)
         <a>Settings</a>
         <a>Past Tours</a>
         <a href="/upcoming">Upcoming Video Tours</a>
         @else
-        <a href="/upcoming">Upcoming Video Tours</a>
+        <a href="/upcoming">Upcoming Video Tours {{Auth::user()->passport}}</a>
         @endif
       @endif
     @endif

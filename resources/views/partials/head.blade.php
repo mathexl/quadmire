@@ -1012,13 +1012,24 @@
         height: 230px;
       }
 
+      .upcoming > .rest > h1 > a{
+        width:100%;
+        font-size:24px;
+        color:#52AEFb;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:0px;
+        text-decoration: none;
+      }
+
       .upcoming > .rest > h1{
         width:100%;
         font-size:24px;
         color:#52AEFb;
-        font-family:"Oswald","Lato";
+        font-family:"Lato";
         margin-top:0px;
         margin-bottom:0px;
+        text-decoration: none;
       }
 
       .upcoming > .rest > h2{
@@ -1059,6 +1070,108 @@
         font-family:"Lato";
         font-size:13px;
         width:90%;
+      }
+
+      .tour {
+        width:80%;
+        margin-left:10%;
+        margin-right:10%;
+        float:left;
+        padding:0px;
+        margin-top:50px;
+        box-sizing: border-box;
+        display:inline-block;
+        background-color:white;
+        min-height: calc(100vh - 110px);
+      }
+
+      .tour > .prof{
+        width:210px;
+        margin:20px;
+        height:210px;
+        float:left;
+        background-position: center center;
+        background-size:cover;
+      }
+
+      .tour > .rest{
+        width: 50%;
+        width: calc(100% - 250px);
+        float:left;
+        box-sizing: border-box;
+        padding-top:20px;
+        height: 230px;
+      }
+
+      .tour > .rest > h1 {
+        width:100%;
+        font-size:24px;
+        color:#52AEFb;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:0px;
+        text-decoration: none;
+      }
+
+      .tour > .rest > h2{
+        width:100%;
+        font-size:14px;
+        color:#888;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:20px;
+      }
+
+      .tour > .rest > span{
+
+        border-radius:4px;
+        border:1px #bbb solid;
+        color:#bbb;
+        padding:6px;
+        font-family:"Lato";
+        font-size:15px;
+
+      }
+
+      .tour > .rest > .cancel{
+
+        border-radius:4px;
+        border:0px #bbb solid;
+        color:#ff6632;
+        cursor:pointer;
+        padding:6px;
+        font-family:"Lato";
+        font-size:15px;
+
+      }
+
+      .tour > .rest > p{
+
+        color:#bbb;
+        font-family:"Lato";
+        font-size:13px;
+        width:90%;
+      }
+
+      #delegation{
+        width:100%;
+        height:100px;
+        background-color:#ff6632;
+        color:white;
+        display:inline-block;
+      }
+
+      #delegation > h1{
+        width:90%;
+        font-family:"Lato";
+        font-weight:200;
+        margin-top:27px;
+        text-align:center;
+
+        margin-left:5%;
+        margin-right:5%;
+        font-size:30px;
+        color:white;
       }
   </style>
   <meta id="token" name="token" value="{{ csrf_token() }}">

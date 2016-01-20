@@ -5,7 +5,7 @@
   <div class="upcoming" v-for="tour in tours" track-by="$index">
     <div class="prof" style="background-image:url('{!! URL::asset('assets/images') !!}/@{{tour.cover}}')"></div>
     <div class="rest">
-      <h1>@{{tour.name}}</h1>
+      <h1><a href="tour/@{{tour.id}}">@{{tour.name}}</a></h1>
       <h2>
         @{{tour.location}}
       </h2>

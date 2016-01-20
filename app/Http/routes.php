@@ -72,6 +72,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('/book', 'TourController@request');
     Route::get('/upcoming', 'TourController@upcoming');
     Route::get('/tour/delete/{id}', 'TourController@delete');
+    Route::get('/tour/{id}', 'TourController@tour');
+    Route::get('/delegate/{id}', 'TourController@delegate');
+    Route::post('/delegate/{tour}', 'TourController@delegatetour');
+    Route::get('/get_access', 'HomeController@get_access');
 
 });
 
