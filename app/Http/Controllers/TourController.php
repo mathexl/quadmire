@@ -71,7 +71,7 @@ class TourController extends Controller
     public function tour($id){
       $tour = Tour::find($id);
       $user = Auth::user();
-      if($tour->prospie != $user->id){
+      if($tour->prospie != $user->id && $tour->designee != $user->id){
         return view('error.404');
       }
       $college = College::find($tour->college);
@@ -88,6 +88,7 @@ class TourController extends Controller
       $hosts = DB::table('users')
             ->join('passports', 'passports.id', '=', 'users.passport')
             ->where('passports.college', '=', $college->id)
+            ->select('users.*')
             ->distinct()->get();
 
       $tours = DB::table('tours')
@@ -114,6 +115,8 @@ class TourController extends Controller
       $tour->designee = $host->id;
       $tour->save();
 
+
+
       return "Designated: " . $host->id . " to " . $tour->id;
     }
 
@@ -132,14 +135,22 @@ class TourController extends Controller
     }
 
     public function upcoming(){
-
-      $tours = DB::table('tours')
-            ->join('colleges', 'colleges.id', '=', 'tours.college')
-            ->select('tours.*', 'colleges.name','colleges.cover', 'colleges.population')
-            ->where('tours.prospie', '=', Auth::user()->id)
-            ->distinct()->get();
-
       $user = Auth::user();
+      if($user->passport == 0){
+        $tours = DB::table('tours')
+              ->join('colleges', 'colleges.id', '=', 'tours.college')
+              ->select('tours.*', 'colleges.name','colleges.cover', 'colleges.population')
+              ->where('tours.prospie', '=', Auth::user()->id)
+              ->distinct()->get();
+      } else {
+        $tours = Tour::all();
+
+        $tours = DB::table('tours')
+              ->join('users', 'users.id', '=', 'tours.prospie')
+              ->select('tours.*', 'users.name','users.highschool', 'users.year', 'users.major')
+              ->where('tours.designee', '=', (string) $user->id)
+              ->get();
+      }
 
       return view('upcoming')->with(['tours' => $tours,'user' => $user]);
     }

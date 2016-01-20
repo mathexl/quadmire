@@ -73,7 +73,7 @@
 </section>
 <section name="videometrics" >
   <div class="leftbloc">
-    <h1>
+    <h1 style="text-align:center;">
       <i class="fa fa-camera-retro"></i>
       <br>YOUR VIDEOMETRICS</h1>
   </div>

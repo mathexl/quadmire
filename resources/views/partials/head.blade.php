@@ -1003,6 +1003,15 @@
         background-size:cover;
       }
 
+      .upcoming > .buffer{
+        width:5px;
+        margin:10px;
+        height:210px;
+        float:left;
+        background-position: center center;
+        background-size:cover;
+      }
+
       .upcoming > .rest{
         width: 50%;
         width: calc(100% - 250px);
@@ -1031,6 +1040,23 @@
         margin-bottom:0px;
         text-decoration: none;
       }
+
+      .upcoming > .rest > h3{
+        width:100%;
+        font-size:14px;
+        color:#888;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:0px;
+        text-decoration: none;
+      }
+
+      .upcoming > .rest > h3 b{
+        color:white;
+        background-color:#ff6632;
+        padding:4px;
+      }
+
 
       .upcoming > .rest > h2{
         width:100%;

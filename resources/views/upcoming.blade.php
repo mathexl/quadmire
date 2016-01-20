@@ -3,18 +3,31 @@
 @section('content')
 <div id="tours" style="min-height: 100vh;">
   <div class="upcoming" v-for="tour in tours" track-by="$index">
-    <div class="prof" style="background-image:url('{!! URL::asset('assets/images') !!}/@{{tour.cover}}')"></div>
+    <div class="prof" v-if="tour.cover" style="background-image:url('{!! URL::asset('assets/images') !!}/@{{tour.cover}}')"></div>
+    <div class="buffer" v-else></div>
     <div class="rest">
       <h1><a href="tour/@{{tour.id}}">@{{tour.name}}</a></h1>
       <h2>
         @{{tour.location}}
       </h2>
 
+      @if($user->passport != 0)
+      <h3>
+        <p><b>Prospective Major</b> @{{tour.major}}</p>
+        <p><b>High School</b> @{{tour.highschool}}</p>
+        <p><b>Current Year</b> Class of @{{tour.year}}</p>
 
-      <span class="pending">PENDING</span>
-      <span class="cancel" v-on:click="del($index,tour.id)">Cancel</span>
-      <p>Your request is currently pending.  We will notify you very soon of
-      our available tour times for a video tour.</p>
+      </h3>
+      @else
+        <span class="pending">PENDING</span>
+        <span class="cancel" v-on:click="del($index,tour.id)">Cancel</span>
+        <p>Your request is currently pending.  We will notify you very soon of
+        our available tour times for a video tour.</p>
+      @endif
+
+
+
+
     </div>
 
   </div>
