@@ -44,6 +44,11 @@ class HomeController extends Controller
         }
     }
 
+    public function settings(){
+      $user = Auth::user();
+      return view('settings')->with(["user" => $user]);
+    }
+
     public function setup(Request $request){
         $user = Auth::user();
         if($user){

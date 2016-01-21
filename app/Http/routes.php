@@ -76,6 +76,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/delegate/{id}', 'TourController@delegate');
     Route::post('/delegate/{tour}', 'TourController@delegatetour');
     Route::get('/get_access', 'HomeController@get_access');
+    Route::get('/settings', 'HomeController@settings');
 
 });
 
