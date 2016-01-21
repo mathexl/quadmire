@@ -142,6 +142,10 @@ class TourController extends Controller
               ->select('tours.*', 'colleges.name','colleges.cover', 'colleges.population')
               ->where('tours.prospie', '=', Auth::user()->id)
               ->distinct()->get();
+        foreach($tours as $tour){
+          $host = User::find($tour->designee);
+          $tour->designee = $host;
+        }
       } else {
         $tours = Tour::all();
 

@@ -19,10 +19,14 @@
 
       </h3>
       @else
-        <span class="pending">PENDING</span>
+        <span class="pending" v-if="tour.designee == null">PENDING</span>
         <span class="cancel" v-on:click="del($index,tour.id)">Cancel</span>
-        <p>Your request is currently pending.  We will notify you very soon of
+        <p v-if="tour.designee == null">Your request is currently pending.  We will notify you very soon of
         our available tour times for a video tour.</p>
+        <p v-else>
+          You've been paired with <b>@{{tour.designee.name}}</b>!  They are studying
+          <b>@{{tour.designee.major}}</b> at @{{tour.name}}
+        </p>
       @endif
 
 
