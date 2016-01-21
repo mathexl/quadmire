@@ -8,10 +8,11 @@
     <h1>YOUR SETTINGS</h1>
     <h2>Edit your profile settings below.</h2>
 
-    <form action="/setup" method="POST">
+    {!! Form::open(array('url' => '/settings','novalidate','files' => true)) !!}
       {!! csrf_field() !!}
       <h3>Your profile picture.</h3>
-      <input type="file" value="Change Profile Picture">
+
+      {!! Form::file('image') !!}
 
       <h3>Your general account settings regarding your video chat capacities.</h3>
       <div class="block">
@@ -57,7 +58,7 @@
       <input class="form" placeholder="If applicable, what major are you interested in? (e.g. Chemistry)" name="major">
       </div>
       <input type="submit" value="SAVE">
-    </form>
+    {!! Form::close() !!}
   </div>
 </section>
 

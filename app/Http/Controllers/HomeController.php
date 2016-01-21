@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\College;
 use App\Passport;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -47,6 +50,21 @@ class HomeController extends Controller
     public function settings(){
       $user = Auth::user();
       return view('settings')->with(["user" => $user]);
+    }
+
+    public function edit(Request $request){
+      \Cloudinary::config(array(
+          "cloud_name" => "uprospie",
+          "api_key" => "348123498328427",
+          "api_secret" => "5_vRehNihN3R2RnTHUtAHuUhe-E",
+          "secure" => false //make true when you install ssh
+      ));
+      $hash = md5(time() . mt_rand()) . '.jpg';
+      copy($request->image,"assets/images/" . $hash);
+      $upload = \Cloudinary\Uploader::upload("assets/images/" . $hash);
+      $user = Auth::user();
+      $user->prof = $upload['url'];
+      $user->save();
     }
 
     public function setup(Request $request){
