@@ -60,11 +60,28 @@ class HomeController extends Controller
           "secure" => false //make true when you install ssh
       ));
       $hash = md5(time() . mt_rand()) . '.jpg';
-      copy($request->image,"assets/images/" . $hash);
-      $upload = \Cloudinary\Uploader::upload("assets/images/" . $hash);
+
       $user = Auth::user();
-      $user->prof = $upload['url'];
+
+      if($request->image){
+        copy($request->image,"assets/images/" . $hash);
+        $upload = \Cloudinary\Uploader::upload("assets/images/" . $hash);
+        $user->prof = $upload['url'];
+      }
+
+      $user->skype_username = $request->skype;
+      $user->google_username = $request->google;
+      $user->facetime_username = $request->facetime;
+      $user->year = $request->year;
+      if($request->highschool){
+        $user->highschool = $request->highschool;
+      } else {
+        $user->clubs = $request->clubs;
+      }
+      $user->major = $request->major;
       $user->save();
+
+      return redirect('/settings');
     }
 
     public function setup(Request $request){

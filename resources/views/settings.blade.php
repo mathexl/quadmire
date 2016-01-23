@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section name="external">
+<section name="external" style="height:auto;min-height:100vh;">
   <div class="overlay">
   </div>
   <div class="main">
@@ -12,8 +12,8 @@
       {!! csrf_field() !!}
       <h3>Your profile picture.</h3>
 
-      {!! Form::file('image') !!}
-
+      <img src="{{$user->prof}}" style="float:left;height:40px;width:40px;float:left;border-radius:100%;margin-top:-10px;margin-right:10px;">{!! Form::file('image') !!}
+      <br><br>
       <h3>Your general account settings regarding your video chat capacities.</h3>
       <div class="block">
       <div class="typebloc">
@@ -39,7 +39,7 @@
       <div class="typebloc">
         <i class="fa fa-calendar"></i>
       </div>
-      <input class="form" placeholder="What year do you graduate? (e.g. 2017)" name="year">
+      <input class="form" placeholder="What year do you graduate? (e.g. 2017)" name="year" value="{{$user->year}}">
       </div>
 
       <h3>What high school did you attend.</h3>
@@ -47,7 +47,7 @@
       <div class="typebloc">
         <i class="fa fa-fort-awesome"></i>
       </div>
-      <input class="form" placeholder="Which High School do you attend? (e.g. Jane Smith HS, NY)" name="highschool">
+      <input class="form" placeholder="Which High School do you attend? (e.g. Jane Smith HS, NY)" name="highschool" value="{{$user->highschool}}">
       </div>
 
       <h3>What major are you interested in.</h3>
@@ -55,7 +55,7 @@
       <div class="typebloc">
         <i class="fa fa-book"></i>
       </div>
-      <input class="form" placeholder="If applicable, what major are you interested in? (e.g. Chemistry)" name="major">
+      <input class="form" placeholder="If applicable, what major are you interested in? (e.g. Chemistry)" name="major" value="{{$user->major}}">
       </div>
       <input type="submit" value="SAVE">
     {!! Form::close() !!}

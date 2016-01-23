@@ -14,6 +14,7 @@ class AddProfilePicToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
+            $table->String("prof");
         });
     }
 

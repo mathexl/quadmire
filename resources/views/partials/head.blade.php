@@ -125,6 +125,16 @@
       cursor:default;
     }
 
+    .nonhover > img{
+      width:40px;
+      height:40px;
+      border-radius:100%;
+      display:inline-block;
+      float:left;
+      margin-top:-10px;
+      margin-right:10px;
+    }
+
     section[name="main"]{
       width:100%;
       height:100vh;
@@ -992,6 +1002,7 @@
         display:inline-block;
         background-color:white;
         border:2px #ddd solid;
+        position:relative;
       }
 
       .upcoming > .prof{
@@ -1057,6 +1068,88 @@
         padding:4px;
       }
 
+      .upcoming > .rest > .prospie{
+        width:50%;
+        font-size:14px;
+        color:#888;
+        font-family:"Lato";
+        margin-top:0px;
+        margin-bottom:0px;
+        display:inline-block;
+        text-decoration: none;
+        float:left;
+      }
+
+      .upcoming > .rest > .prospie b{
+        color:white;
+        background-color:#ff6632;
+        padding:4px;
+      }
+
+      .upcoming > .rest > .propose{
+        width:50%;
+        font-size:14px;
+        color:#888;
+        font-family:"Lato";
+        margin-top:0px;
+        display:inline-block;
+        margin-bottom:0px;
+        text-decoration: none;
+        float:left;
+        min-height: 100px;
+        margin-top:-50px;
+      }
+
+      .upcoming > .rest > .propose > form{
+        width:100%;
+        padding:10px;
+        box-sizing: border-box;
+      }
+
+      .upcoming > .rest > .propose > form > fieldset{
+        width:100%;
+        float:left;
+        box-sizing: border-box;
+        padding:0px;
+        margin-bottom:6px;
+        border:none;
+      }
+
+      .upcoming > .rest > .propose > form > fieldset > h1{
+        font-size:12px;
+        font-color:#888;
+        margin-top:0px;
+        margin-bottom:0px;
+      }
+
+      .upcoming > .rest > .propose > form > fieldset > select{
+        height:20px;
+        width:25%;
+        float:left;
+        margin-right:3%;
+        color:#52AEFB;
+        background-color:white;
+        border:1px #52AEFB solid;
+      }
+
+      .upcoming > .rest > .propose > form  > input{
+        height:20px;
+        float:left;
+        margin-right:3%;
+        color:white;
+        background-color:#52AEFB;
+        border:none;
+      }
+
+      .upcoming > .rest > .propose > form > fieldset > select + select {
+        width:18%;
+      }
+
+
+      .upcoming > .rest > .propose > form > fieldset > select + select + select{
+        width:45%;
+      }
+
 
       .upcoming > .rest > h2{
         width:100%;
@@ -1075,6 +1168,32 @@
         padding:6px;
         font-family:"Lato";
         font-size:15px;
+      }
+
+      .upcoming > .rest > .tag{
+
+        border-radius:4px;
+        border:1px #bbb solid;
+        color:#bbb;
+        padding:5px;
+        font-family:"Lato";
+        font-size:15px;
+        width:90%;
+      }
+
+      .upcoming > .rest > .tag > p{
+        margin-top:0px;
+        font-size:12px;
+        margin-bottom:0px;
+      }
+
+
+      .upcoming > .rest > .tag > p > img{
+
+        width:30px;
+        height: 30px;
+        float:left;
+        margin-right:5px;
 
       }
 
@@ -1087,7 +1206,11 @@
         padding:6px;
         font-family:"Lato";
         font-size:15px;
-
+        position:absolute;
+        bottom:30px;
+        left:30px;
+        background-color:white;
+        opacity:.8;
       }
 
       .upcoming > .rest > p{
@@ -1199,9 +1322,42 @@
         font-size:30px;
         color:white;
       }
+
+      .info{
+        width:100%;
+        height:auto;
+        padding-top:10px;
+        padding-bottom:10px;
+        background-color:white;
+        border-top:5px #52AEFB solid;
+      }
+
+      .info > h1{
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        margin-top:5px;
+        margin-bottom:0px;
+        color:#52AEFB;
+        font-family:"Lato";
+        text-align:center;
+      }
+
+      .info > h2{
+        width:80%;
+        margin-left:10%;
+        margin-right:10%;
+        margin-top:5px;
+        margin-bottom:0px;
+        color:#888;
+        font-family:"Lato";
+        text-align:center;
+        font-size:14px;
+        font-weight:300;
+      }
   </style>
   <meta id="token" name="token" value="{{ csrf_token() }}">
   <script>
-  Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
+  //Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
   </script>
 </head>

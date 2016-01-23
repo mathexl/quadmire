@@ -156,6 +156,7 @@ class TourController extends Controller
               ->get();
       }
 
+
       return view('upcoming')->with(['tours' => $tours,'user' => $user]);
     }
 }

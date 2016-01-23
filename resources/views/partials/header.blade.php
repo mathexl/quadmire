@@ -7,10 +7,12 @@
     <a href="/login" >Login</a>
     @else
     <a href="/logout" class="embezzle">Log Out</a>
-    <a class="nonhover">{{Auth::user()->name}}</a>
+    <a class="nonhover">
+      <img src="{{Auth::user()->prof}}">
+      {{Auth::user()->name}}</a>
       @if(Auth::user()->setup == true)
         @if(Auth::user()->password == 0)
-        <a>Settings</a>
+        <a href="/settings">Settings</a>
         <a>Past Tours</a>
         <a href="/upcoming">Upcoming Video Tours</a>
         @else
