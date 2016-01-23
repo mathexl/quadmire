@@ -151,7 +151,7 @@ class TourController extends Controller
 
         $tours = DB::table('tours')
               ->join('users', 'users.id', '=', 'tours.prospie')
-              ->select('tours.*', 'users.name','users.highschool', 'users.year', 'users.major')
+              ->select('tours.*', 'users.name','users.highschool', 'users.year', 'users.major', 'users.prof')
               ->where('tours.designee', '=', (string) $user->id)
               ->get();
       }

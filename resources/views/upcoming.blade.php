@@ -15,7 +15,17 @@
     <div class="prof" v-if="tour.cover" style="background-image:url('{!! URL::asset('assets/images') !!}/@{{tour.cover}}')"></div>
     <div class="buffer" v-else></div>
     <div class="rest" @if($user->passport != 0) style="width:90%;" @endif>
-      <h1><a href="tour/@{{tour.id}}">@{{tour.name}}</a></h1>
+
+      <h1>
+
+
+        <a href="tour/@{{tour.id}}">
+          @if($user->passport != 0)
+            <img src="@{{tour.prof}}">
+          @endif
+          @{{tour.name}}</a>
+
+      </h1>
       <h2>
         @{{tour.location}}
       </h2>

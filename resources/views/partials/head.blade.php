@@ -1029,6 +1029,7 @@
         float:left;
         box-sizing: border-box;
         padding-top:20px;
+        display:inline-block;
         height: 230px;
       }
 
@@ -1037,9 +1038,16 @@
         font-size:24px;
         color:#52AEFb;
         font-family:"Lato";
-        margin-top:0px;
         margin-bottom:0px;
         text-decoration: none;
+
+      }
+
+      .upcoming > .rest > h1 > a > img{
+        width:40px;
+        height:40px;
+        border-radius:100%;
+        vertical-align: text-bottom;
       }
 
       .upcoming > .rest > h1{
@@ -1050,6 +1058,7 @@
         margin-top:0px;
         margin-bottom:0px;
         text-decoration: none;
+        display:inline-block;
       }
 
       .upcoming > .rest > h3{
