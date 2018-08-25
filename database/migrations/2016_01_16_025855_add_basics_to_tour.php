@@ -12,7 +12,7 @@ class AddBasicsToTours extends Migration
      */
     public function up()
     {
-        
+
     }
 
     /**
@@ -22,6 +22,6 @@ class AddBasicsToTours extends Migration
      */
     public function down()
     {
-        Schema::drop('tours');
+        //Schema::drop('tours');
     }
 }

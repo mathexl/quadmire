@@ -12,6 +12,7 @@ class AddBasicsToTour extends Migration
      */
     public function up()
     {
+      Schema::drop('tours');
       Schema::create('tours', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();

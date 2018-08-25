@@ -10,7 +10,7 @@
     body{
       margin:0px;
       padding:0px;
-      font-family: Lato, sans-serif;
+      font-family: brother 1816, sans-serif;
     }
 
     header{
@@ -160,7 +160,7 @@
       text-align:center;
       color:white;
       font-weight:100;
-      font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
+      font-family:"Oswald", Oswald, brother 1816, "brother 1816", "brother 1816", sans-serif;
       margin-top:30vh;
     }
 
@@ -186,7 +186,7 @@
       margin-right:auto;
       text-decoration: none;
       background-color:#52AEFB;
-      font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
+      font-family:"Oswald", Oswald, brother 1816, "brother 1816", "brother 1816", sans-serif;
     }
 
     section[name="main"] > .overlay > form{
@@ -226,9 +226,12 @@
     section[name="main"] > .overlay > form > fieldset > h1{
       width:100%;
       font-size:11px;
-      font-family:'Lato-Thin',Lato-Thin, Lato, sans-serif;
+      font-family:"brother 1816", sans-serif;
       color: #888;
       margin-left:10px;
+    }
+    *{
+      font-family:"brother 1816";
     }
 
     section[name="main"] > .overlay > form > fieldset > input{
@@ -251,7 +254,7 @@
       margin:0px;
       color:white;
       font-size:16px;
-      font-family:'Oswald','Lato';
+      font-family:'Oswald',"brother 1816";
     }
 
     section[name="main"] > .overlay > form > fieldset > input[type="submit"]:hover{
@@ -283,7 +286,7 @@
     }
 
     section[name="features"] > h1{
-      font-family:'Oswald','Lato';
+      font-family:'Oswald',"brother 1816";
       font-size:24px;
       text-align:center;
       color:white;
@@ -310,7 +313,7 @@
     }
 
     section[name="features"] > .features > .feature > h1{
-      font-family:'Oswald','Lato';
+      font-family:'Oswald',"brother 1816";
       font-size:15px;
       text-align:center;
       color:white;
@@ -332,7 +335,7 @@
     }
 
     section[name="pricing"] > h1{
-      font-family:'Oswald','Lato';
+      font-family:'Oswald',"brother 1816";
       font-size:24px;
       text-align:center;
       color:white;
@@ -359,7 +362,7 @@
     }
 
     section[name="pricing"] > .features > .feature > h1{
-      font-family:'Oswald','Lato';
+      font-family:'Oswald',"brother 1816";
       font-size:15px;
       text-align:center;
       color:white;
@@ -409,7 +412,7 @@
 
     section[name="setup"] > .main > h1{
       font-size:36px;
-      font-family:"Oswald","Lato",Lato;
+      font-family:"Oswald","brother 1816";
       color:#ff6632;
       margin-top:3px;
       margin-left:10px;
@@ -418,7 +421,7 @@
 
     section[name="setup"] > .main > h2{
       font-size:16px;
-      font-family:"Lato",Lato;
+      font-family:"brother 1816";
       color:#888;
       margin-top:0px;
       margin-left:10px;
@@ -427,7 +430,7 @@
 
     section[name="setup"] > .main h3{
       font-size:13px;
-      font-family:"Lato",Lato;
+      font-family:"brother 1816";
       color:#888;
       font-weight:400;
       margin-top:0px;
@@ -445,7 +448,7 @@
       padding-right:15px;
       background-color:#ff6632;
       color:white;
-      font-family: "Oswald","Lato";
+      font-family: "Oswald","brother 1816";
       font-size:18px;
       border:none;
       float:right;
@@ -520,7 +523,7 @@
 
     section[name="external"] > .main > h1{
       font-size:36px;
-      font-family:"Oswald","Lato",Lato;
+      font-family:"Oswald","brother 1816";
       color:#ff6632;
       margin-top:3px;
       margin-left:10px;
@@ -529,7 +532,7 @@
 
     section[name="external"] > .main > h2{
       font-size:16px;
-      font-family:"Lato",Lato;
+      font-family:"brother 1816";
       color:#888;
       margin-top:0px;
       margin-left:10px;
@@ -542,7 +545,7 @@
 
     section[name="external"] > .main h3{
       font-size:13px;
-      font-family:"Lato",Lato;
+      font-family:"brother 1816";
       color:#888;
       font-weight:400;
       margin-top:0px;
@@ -560,7 +563,7 @@
       padding-right:15px;
       background-color:#ff6632;
       color:white;
-      font-family: "Oswald","Lato";
+      font-family: "Oswald","brother 1816";
       font-size:18px;
       border:none;
       float:right;
@@ -646,7 +649,7 @@
       margin-right:5%;
       color:white;
       font-size:20px;
-      font-family:"Oswald","Lato";
+      font-family:"Oswald","brother 1816";
     }
 
     section[name="videometrics"] > .rightbloc{
@@ -671,7 +674,7 @@
       padding-right:15px;
       background-color:#52AEFB;
       color:white;
-      font-family: "Oswald","Lato";
+      font-family: "Oswald","brother 1816";
       font-size:18px;
       border:none;
       float:right;
@@ -727,7 +730,7 @@
       margin-left:5%;
       margin-right:5%;
       color:white;
-      font-family:"Oswald","Lato";
+      font-family:"Oswald","brother 1816";
       font-size:60px;
       margin-top:55px;
       text-align:center;
@@ -749,7 +752,7 @@
       margin-right:auto;
       text-decoration: none;
       background-color:#52AEFB;
-      font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
+      font-family:"Oswald", Oswald, brother 1816, "brother 1816", "brother 1816", sans-serif;
     }
 
       section[name="featurecollege"] a.book:hover{
@@ -779,7 +782,7 @@
         margin-left:5%;
         margin-right:5%;
         color:white;
-        font-family:"Oswald","Lato";
+        font-family:"Oswald","brother 1816";
         font-size:60px;
         margin-top:55px;
         text-align:center;
@@ -801,7 +804,7 @@
         margin-right:auto;
         text-decoration: none;
         background-color:#52AEFB;
-        font-family:"Oswald", Oswald, Lato-Thin, "Lato-Thin", "Lato", Lato, sans-serif;
+        font-family:"Oswald", Oswald, brother 1816, "brother 1816", "brother 1816", sans-serif;
       }
 
         section[name="colleges"] > .college  a.book:hover{
@@ -822,7 +825,7 @@
         margin-left:5%;
         margin-right:5%;
         color:white;
-        font-family:"Oswald","Lato";
+        font-family:"Oswald","brother 1816";
         font-size:40px;
         margin-top:80px;
         text-align:center;
@@ -851,7 +854,7 @@
         padding:5px;
         cursor:pointer;
         background-color:#ddd;
-        font-family:'Lato';
+        font-family:"brother 1816";
         font-size:14px;
         color:white;
         border-radius:5px;
@@ -885,7 +888,7 @@
       }
 
       .bookingform > .fields > .editfield > h1{
-        font-family:"Oswald","Lato";
+        font-family:"Oswald","brother 1816";
         color:#ff6632;
         font-size:20px;
         margin-top:0px;
@@ -893,7 +896,7 @@
       }
 
       .bookingform > .fields > .editfield > h2{
-        font-family:"Lato";
+        font-family:"brother 1816";
         color:#888;
         font-size:14px;
         font-weight:300;
@@ -917,7 +920,7 @@
       }
 
       .bookingform > .fields > .field > h1{
-        font-family:"Lato";
+        font-family:"brother 1816";
         color:#ff6632;
         font-size:12px;
         margin-top:0px;
@@ -927,7 +930,7 @@
       .bookingform > .fields > span{
         width:100%;
         color:#888;
-        font-family: Lato;
+        font-family: brother 1816;
         font-size:12px;
 
       }
@@ -941,7 +944,7 @@
         border-radius:5px;
         font-size:16px;
         color:white;
-        font-family:"Oswald","Lato";
+        font-family:"Oswald","brother 1816";
         text-align:center;
         border:none;
         outline:none;
@@ -954,7 +957,7 @@
         height:30px;
         text-align:center;
         background-color:#52AEFB;
-        font-family:'Lato';
+        font-family:"brother 1816";
         font-size:14px;
         color:white;
         padding-top:6px;
@@ -978,7 +981,7 @@
         text-align:center;
         color: #ff6632;
         font-size:32px;
-        font-family: "Oswald","Lato";
+        font-family: "Oswald","brother 1816";
         margin-bottom:3px;
       }
 
@@ -989,7 +992,7 @@
         text-align:center;
         color: #888;
         font-size:15px;
-        font-family: "Lato";
+        font-family: "brother 1816";
       }
 
       .upcoming {
@@ -1037,7 +1040,7 @@
         width:100%;
         font-size:24px;
         color:#52AEFb;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-bottom:0px;
         text-decoration: none;
 
@@ -1054,7 +1057,7 @@
         width:100%;
         font-size:24px;
         color:#52AEFb;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:0px;
         text-decoration: none;
@@ -1065,7 +1068,7 @@
         width:100%;
         font-size:14px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:0px;
         text-decoration: none;
@@ -1081,7 +1084,7 @@
         width:50%;
         font-size:14px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:0px;
         display:inline-block;
@@ -1099,7 +1102,7 @@
         width:50%;
         font-size:14px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         display:inline-block;
         margin-bottom:0px;
@@ -1164,7 +1167,7 @@
         width:100%;
         font-size:14px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:20px;
       }
@@ -1175,7 +1178,7 @@
         border:1px #bbb solid;
         color:#bbb;
         padding:6px;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:15px;
       }
 
@@ -1185,7 +1188,7 @@
         border:1px #bbb solid;
         color:#bbb;
         padding:5px;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:15px;
         width:90%;
       }
@@ -1213,7 +1216,7 @@
         color:#ff6632;
         cursor:pointer;
         padding:6px;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:15px;
         position:absolute;
         bottom:30px;
@@ -1225,7 +1228,7 @@
       .upcoming > .rest > p{
 
         color:#bbb;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:13px;
         width:90%;
       }
@@ -1265,7 +1268,7 @@
         width:100%;
         font-size:24px;
         color:#52AEFb;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:0px;
         text-decoration: none;
@@ -1275,7 +1278,7 @@
         width:100%;
         font-size:14px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         margin-top:0px;
         margin-bottom:20px;
       }
@@ -1286,7 +1289,7 @@
         border:1px #bbb solid;
         color:#bbb;
         padding:6px;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:15px;
 
       }
@@ -1298,7 +1301,7 @@
         color:#ff6632;
         cursor:pointer;
         padding:6px;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:15px;
 
       }
@@ -1306,7 +1309,7 @@
       .tour > .rest > p{
 
         color:#bbb;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-size:13px;
         width:90%;
       }
@@ -1321,7 +1324,7 @@
 
       #delegation > h1{
         width:90%;
-        font-family:"Lato";
+        font-family:"brother 1816";
         font-weight:200;
         margin-top:27px;
         text-align:center;
@@ -1348,7 +1351,7 @@
         margin-top:5px;
         margin-bottom:0px;
         color:#52AEFB;
-        font-family:"Lato";
+        font-family:"brother 1816";
         text-align:center;
       }
 
@@ -1359,7 +1362,7 @@
         margin-top:5px;
         margin-bottom:0px;
         color:#888;
-        font-family:"Lato";
+        font-family:"brother 1816";
         text-align:center;
         font-size:14px;
         font-weight:300;
